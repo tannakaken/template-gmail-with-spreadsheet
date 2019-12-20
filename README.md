@@ -1,0 +1,2 @@
+# template-gmail-with-spreadsheet
+spreadsheetを使ってテンプレートを穴埋めしたメールをgmailで一斉送信する簡単なgasのサンプル
