@@ -46,7 +46,7 @@ function sendMails(subject, template) {
 
 function sendMail(address, header, row, subject, template) {
   const t = HtmlService.createTemplateFromFile(template);
-  for (var j = 1; j < row.length && j < header.length; j++) {
+  for (var j = 0; j < row.length && j < header.length; j++) {
     t[header[j]] = row[j];
   }
   const body = t.evaluate().getContent();
