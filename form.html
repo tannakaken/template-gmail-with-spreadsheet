@@ -11,7 +11,7 @@
       </table>
       <input type="submit"
              value="送信"
-             onclick="google.script.run.withSuccessHandler(google.script.host.close).withFailureHandler(function(){alert('エラー発生。送信できませんでした。');}).processForm(this.parentNode)" />
+             onclick="google.script.run.withSuccessHandler(google.script.host.close).withFailureHandler(function(error){alert('エラー発生。送信できませんでした:'+error.message);}).processForm(this.parentNode)" />
     </form>
   </body>
 </html>
