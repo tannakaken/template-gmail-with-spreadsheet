@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr><td><label for="subject">件名</label></td><td><input type="text" name="subject" size="60" required="required" /></td></tr>
+        <tr><td><label for="toAddress">送り先</label></td><td><input type="text" name="toAddress" size="60" required="required" /></td></tr>
+        <tr><td><label for="template">テンプレート名</label></td><td><input type="text" name="template" size="60" required="required" /></td></tr>
+      </table>
+      <input type="submit" 
+             value="送信"
+             onclick="google.script.run.withSuccessHandler(google.script.host.close).withFailureHandler(function(){alert('エラー発生。送信できませんでした。');}).processTestForm(this.parentNode)" />
+    </form>
+  </body>
+</html>
